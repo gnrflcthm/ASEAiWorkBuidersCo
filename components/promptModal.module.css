@@ -1,0 +1,13 @@
+
+.modalContainer {
+    background: #FFF;
+    border-radius: 0.5rem;
+}
+
+.modalHeader {
+    border-bottom: 1px solid #999;
+}
+
+.modalHeader h4 {
+    color: #000;
+}

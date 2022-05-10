@@ -1,0 +1,70 @@
+
+.sampleCalculator {
+    max-height: calc(100vh - 66px);
+    height: calc(100vh - 66px);
+    background: #D3D3D3;
+}
+
+.sampleCalculatorHeader h2 {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.sampleCalculatorHeader h2::after {
+    content: '';
+    width: 90%;
+    position: absolute;
+    height: 2px;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%);
+    background: #000;
+}
+
+.sampleCalculatorBody {
+
+}
+
+.finishType h5 {
+    margin: 1rem 0;
+}
+
+.finishSelect {
+
+}
+
+.finishValue {
+    outline: none;
+    border: 1px solid transparent;
+    flex: 0 0 20%;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    background: #031579;
+    color: #FFF;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.activeFinish, .finishValue:hover {
+    background: #49E3EF;
+    color: #000;
+}
+
+.floorArea {
+    margin: 2rem 0;
+}
+
+.floorArea h4 {
+}
+
+.floorArea input, .estimatedPrice input {
+    flex: 1;
+    margin: 0 2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    color: #031579;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

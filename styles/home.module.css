@@ -1,0 +1,284 @@
+.home {
+    height: 100%;
+}
+
+.hero, .features, .priceCalculator {
+    max-height: calc(100vh - 66px);
+    height: calc(100vh - 66px);
+}
+
+.workShowcase {
+    min-height: calc(100vh - 66px);
+}
+
+.hero {
+    padding-bottom: 66px;
+}
+
+.heroContent {
+    color: #FFF;
+}
+
+.heroContent h2 {
+    font-weight: bold;
+    position: relative;
+}
+
+.heroContent h2::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: relative;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    background-color: #FFF;
+}
+
+.heroContent h4 {
+    margin: 1.5rem 0;
+}
+
+.heroContentWorkButton {
+    outline: none;
+    background: transparent;
+    border: 2px solid #FFF;
+    color: #FFF;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.heroContentWorkButton:hover {
+    background: #FFF;
+    color: #000;
+}
+
+.workShowcaseHeader h2 {
+    color: #FFF;
+    position: relative;
+    font-weight: bold;
+}
+
+.workShowcaseHeader h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 100%;
+    height: 1px;
+    background: #FFF;
+}
+
+.workShowcaseContent, .offersContent {
+    position: relative;
+    background: #031579;
+    padding: 0 3rem;
+    width: 100%;
+}
+
+.workShowcaseItem {
+    cursor: pointer;
+}
+
+.imagePreview img {
+    display: block;
+}
+
+.sliderDots {
+    filter: invert(1);
+}
+
+.floorPlannerFeature, .appointmentFeature {
+    flex: 0 0 50%
+}
+
+.floorPlannerFeature {
+    background: #031579;
+}
+
+.floorPlannerFeatureDetails h2, .appointmentFeatureDetails h2 {
+    font-weight: bold;
+}
+
+.floorPlannerFeatureDetails {
+    display: flex;
+    flex: 0 0 40%;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+}
+
+.floorPlannerFeatureDetails button, .appointmentFeatureDetails button {
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.floorPlannerFeatureDetails *, .appointmentFeatureDetails * {
+    margin: 0.5rem 0;
+}
+
+.floorPlannerFeatureDetails button {
+    background: #FFF;
+    color: #000;
+}
+
+.floorPlannerFeatureDetails button:hover, .appointmentFeatureDetails button:hover {
+    background: #49E3EF;
+    color: #000;
+    transition: all 0.2s ease;
+}
+
+.floorPlannerFeatureImageWrapper, .appointmentFeatureImageWrapper {
+    flex: 0 1 20%;
+}
+
+.appointmentFeature {
+    background: #FFF;
+}
+
+.appointmentFeatureDetails {
+    display: flex;
+    flex: 0 0 40%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.appointmentFeatureDetails button {
+    background: #031579;
+    color: #FFF;
+}
+
+.appointmentFeatureImage {
+    height: 100px;
+    width: 100px;
+    background: red;
+    flex: 0 0 30%;
+}
+
+.offers {
+    background: #031579;
+}
+
+.offersHeader {
+    flex: 0 0 20%;
+    color: #FFF;
+}
+
+.offersHeader h2 {
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.offersHeader h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 100%;
+    height: 1px;
+    background: #FFF;
+}
+
+.offersContent {
+    flex: 1 0 75%;
+    padding-bottom: 3rem;
+}
+
+.offersContentItem {
+    background: #FFF;
+    border-radius: 1rem;
+    margin: 0 2rem;
+    min-height: 65vh;
+    max-height: 65vh;
+}
+
+.offersImageWrapper {
+    height: 100px;
+    width: 100px;
+}
+
+.offersImageWrapper img {
+    display: block;
+    width: 100%;
+}
+
+.offersContentItem h4 {
+    font-weight: bold;
+}
+
+.priceCalculator {
+    background: #031579;
+    color: #FFF;
+    min-height: calc(100vh - 66px);
+}
+
+.priceCalculatorDetails {
+}
+
+.priceCalculatorDetails h4 {
+    margin: 0.5rem 0;
+}
+
+.priceCalculatorDetails h2, .priceCalculatorDetails button {
+    margin: 1.5rem 0;
+}
+
+.priceCalculatorDetails h2 {
+    font-weight: bold;
+}
+
+.priceCalculatorDetails button {
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    background: #FFF;
+    color: #000;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.priceCalculatorDetails button:hover {
+    background: #49E3EF;
+}
+
+.priceCalculatorImageWrapper {
+    position: relative;
+    flex: 0 1 30%;
+}
+
+.floorButton{
+    font-family: "Montserrat";
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      display: block;
+      position: relative;
+      text-align: center;
+      border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 1rem;
+      font-size: 1.1rem;
+    /* margin: 20px; */
+    /* margin-left: 0px; */
+    width: 100%;
+    background-color: white;
+      cursor: pointer;
+      transition: all 0.2s ease;
+  }
+  
+  .floorButton:hover{
+    background: #49e3ef;
+    color: white;
+  }

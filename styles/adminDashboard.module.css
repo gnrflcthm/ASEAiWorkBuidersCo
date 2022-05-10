@@ -1,0 +1,29 @@
+.adminDashboard {
+    min-height: 100vh;
+    background: #ddd;
+}
+
+.dashboardBody {
+    min-height: 80vh;
+}
+
+.adminNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem 0;
+    height: 100vh;
+    background: #031579;
+    z-index: 2000;
+}
+
+.adminNav a {
+    text-decoration: none;
+    padding: 1rem;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.adminNav a:hover {
+    background-color: #ffffff88;
+}

@@ -1,0 +1,32 @@
+
+.adminLogin {
+    height: 100vh;
+    background: #FFF;
+}
+
+.adminLogin h2 {
+    color: #031579;
+}
+
+.loginContainer {
+    background: #FFF;
+    border: 1px solid #000;
+    border-radius: 1rem;
+}
+
+.loginContainer label {
+    color: #031579;
+}
+
+.signInBtn {
+    font-weight: bold;
+    background: #031579;
+    color: #FFF;
+    border-radius: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.signInBtn:hover {
+    color: #000;
+    background: #49E3EF;
+}

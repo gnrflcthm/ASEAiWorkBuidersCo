@@ -1,0 +1,68 @@
+.appointment {
+    min-height: calc(100vh - 66px);
+    color: #fff;
+}
+
+.header {
+    flex: 0 0 20%;
+}
+
+.header h2 {
+    position: relative;
+}
+
+.header h2::after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 90%;
+    height: 2px;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.body {
+    flex: 1 0 50%;
+}
+
+.calendarContainer {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem #031579;
+}
+
+.legend,
+.selectedDate {
+    background: #031579;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    box-shadow: 1rem 1rem #49e3ef;
+}
+
+.selectedDate {
+    text-align: center;
+}
+
+.selectedDate button {
+    background: #ffffff;
+    border-radius: 1.5rem;
+}
+
+.selectedDate button:hover {
+    background: #49e3ef;
+    color: #000;
+}
+
+.requestAppointment {
+    font-weight: bold;
+}
+
+.cancelAppointment {
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+.cancelAppointment:hover {
+    color: #f14859 !important;
+}

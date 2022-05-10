@@ -1,0 +1,75 @@
+
+.navbar {
+    background: #031579;
+    color: #FFF;
+    transition: all 0.2s ease;
+}
+
+.navHome {
+    background-color: transparent;
+    margin-top: 1rem;
+}
+
+.companyLogo, .companyName {
+    cursor: pointer;
+}
+
+.companyName {
+    margin: 0 1rem;
+}
+
+.navRoutes {
+    z-index: 100;
+    width: 100%;
+    background: inherit;
+    left: 0;
+    top: 100%;
+    text-align: center;
+}
+
+.navRoute {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navRoute:hover {
+    color: #49E3EF;
+}
+
+.activeRoute {
+    position: relative;
+    color: #49E3EF;
+}
+
+.activeRouteSM {
+    background: #FFFFFF22;
+    color: #49E3EF;
+}
+
+.activeRoute::after {
+    content: '';
+    background-color: #49E3EF;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.navAccent {
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    height: 0.2rem;
+    width: 100%;
+    transition: all 0.2s ease;
+    z-index: -1;
+}
+
+.hideAccent {
+    background: transparent;
+}
+
+.showAccent {
+    background: #49E3EF;
+}

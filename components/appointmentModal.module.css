@@ -1,0 +1,46 @@
+.modalContainer {
+    background: #fff;
+    border-radius: 1rem;
+    color: #000;
+    position: relative;
+    max-height: 90%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+.modalContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.modalContainer h2 {
+    text-align: center;
+}
+
+.modalBody button {
+    background: #031579;
+    color: #fff;
+}
+
+.modalHeader {
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.setAppointmentBtn {
+    font-weight: bold;
+}
+
+.setAppointmentBtn:hover {
+    color: black;
+    background-color: #49e3ef;
+    font-weight: bold;
+}

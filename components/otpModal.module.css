@@ -1,0 +1,20 @@
+
+.modalContainer {
+    background: #FFFFFF;
+    border-radius: 1rem;
+    color: #000;
+}
+
+.modalHeader {
+    position: relative;
+}
+
+.modalHeader h3 {
+    text-align: center;
+}
+
+.submitBtn {
+    border-radius: 1rem;
+    background: #031579;
+    color: #FFF;
+}

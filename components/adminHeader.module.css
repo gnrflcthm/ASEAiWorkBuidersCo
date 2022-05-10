@@ -1,0 +1,25 @@
+.signOut {
+    background: none;
+    border: none;
+}
+
+.signOut:hover p, .signOut:hover svg {
+    text-shadow: 0px 0px 5px #FFE7BE;
+}
+
+.returnBtn, .profileBtn {
+    background: transparent;
+    border: none;
+    color: #FFF;
+    transition: all 0.2s ease;
+}
+
+.returnBtn:hover {
+    color: #49E3EF;
+}
+
+.menuItem {
+    border: none;
+    background: #FFF;
+}
+

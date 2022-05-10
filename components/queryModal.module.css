@@ -1,0 +1,40 @@
+.modalContainer {
+    background: #FFFFFF;
+    border-radius: 1rem;
+    color: #000;
+}
+
+.modalHeader {
+    position: relative;
+}
+
+.modalHeader h3 {
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.submitBtn {
+    background: #031579;
+    color: #FFF;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.submitBtn:hover {
+    background: #49E3EF;
+    color: #000;
+}
+
+.modalBody label {
+    color: #000;
+}
+
+.formGroup {
+    margin-bottom: 0.5rem;
+}

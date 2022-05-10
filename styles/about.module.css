@@ -1,0 +1,82 @@
+.about {
+    min-height: calc(100vh - 66px);
+}
+
+.aboutHeader {
+    color: #fff;
+    height: 30vh;
+}
+
+.certificationsHeader {
+    color: #fff;
+    height: 25vh;
+}
+
+.aboutHeader h2,
+.certificationsHeader h2 {
+    position: relative;
+}
+
+.aboutHeader h2::after,
+.certificationsHeader h2::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%);
+}
+
+.companyProfile {
+    position: relative;
+    background: #031579;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.companyProfileDecor {
+    flex: 0 0 10%;
+}
+
+.dot,
+.line {
+    background: #fff;
+}
+
+.companyProfileDecor .dot {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    transform: scale(1.1);
+}
+
+.companyProfileDecor .line {
+    flex: 0 0 90%;
+    width: 0.5rem;
+}
+
+.companyProfileContent {
+    flex: 1 0 70%;
+}
+
+.mission,
+.vision {
+    background: #fff;
+    box-shadow: -0.625rem 0.625rem #49e3ef;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.certifications {
+    background: #031579;
+}
+
+.certificationImage {
+    width: 50%;
+    cursor: pointer;
+}

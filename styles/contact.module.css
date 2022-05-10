@@ -1,0 +1,52 @@
+.contactPage {
+    min-height: calc(100vh - 66px);
+    background: #D3D3D3CC;
+}
+
+.contactDetails ul {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.contactDetails li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contactIcon {
+    background: white;
+	color: #031579;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	display: block;
+	padding: 0.18rem;
+	margin-right: 0.5rem;
+}
+
+.socMeds {
+    background:#49E3EF;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.socMedLink {
+    transform: scale(1.3);
+    color: #031579;
+    transition: all 0.2s ease;
+}
+
+.socMedLink:hover {
+    transform: scale(1.5);
+}
+
+.contactDetails{
+    background-color: rgba(3,21,121);
+    padding: 1.5rem;
+    border-radius: 0.938rem;
+    color:white;
+}
+
+.contactDetails h2{
+    padding-bottom: 1.5rem;
+}

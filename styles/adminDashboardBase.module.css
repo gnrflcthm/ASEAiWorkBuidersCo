@@ -1,0 +1,183 @@
+.adminDashboardBase {
+    min-height: 100vh;
+    background: #ddd;
+}
+
+.adminDashboardBase h2,
+.contentHeader {
+    text-align: center;
+    color: #fff;
+}
+
+.commands button {
+    border-radius: 0.5rem;
+    padding: 0.2rem 1rem;
+    border: 0px;
+    outline: none;
+    margin: 0 0.2rem;
+    color: #fff;
+    flex: 0 0 33%;
+}
+
+.btnCreate {
+    background: #0275d8;
+}
+
+.searchBar input {
+    border: 0px transparent;
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+    outline: none;
+}
+
+.searchBar button {
+    border: 2px #b6b6b6;
+    padding: 0 1rem;
+}
+
+.adminTable thead tr th:first-child {
+    border-top-left-radius: 0.5rem;
+}
+
+.adminTable thead tr th:last-child {
+    border-top-right-radius: 0.5rem;
+}
+
+.adminTable tbody {
+    border: 0px transparent;
+}
+
+.modalContainer {
+    background: #fff;
+    border-radius: 1rem;
+    color: #000;
+}
+
+.modalHeader h2 {
+    color: #000;
+}
+
+.modalHeader {
+    position: relative;
+}
+
+.closeModal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.adminTable {
+    max-height: 50vh;
+}
+
+.tableBody td {
+    vertical-align: middle;
+}
+
+.tableNav {
+    margin: 0 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.tableNav:hover {
+    color: #49e3ef;
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.tabPanel {
+    /* min-height: 50vh;
+    max-height: 50vh; */
+    overflow-y: auto;
+}
+
+.tabPanel label {
+    font-weight: bold;
+}
+
+.contactItem {
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    margin: 0.2rem 0;
+    padding: 0.5rem 0;
+}
+
+.contactItem p {
+    margin: 0;
+}
+
+.queryItem {
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    margin: 0.2rem 0;
+    padding: 0.5rem 0;
+}
+
+.queryItem p {
+    margin: 0;
+}
+
+.queryItemQuestion {
+    font-weight: bold;
+}
+
+.projectItem {
+    border-radius: 0.2rem;
+    border: 1px solid #ccc;
+}
+
+.projectItem p,
+.projectItem h5 {
+    margin: 0.3rem 0;
+}
+
+.projectItem p {
+    padding: 0 0.5rem;
+}
+
+.homeContent {
+    /* max-height: 200px; */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.homeContentItem {
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+}
+
+.homeContentIcon,
+.certificationIcon {
+    height: 25px;
+    width: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.certifications {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.menuButton {
+    background: transparent;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.menuItem {
+    border: none;
+    background: #fff;
+}

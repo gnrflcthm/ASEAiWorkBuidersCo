@@ -1,0 +1,38 @@
+<body>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 1px 5px;
+        }
+    </style>
+    <h1>Queries</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact No.</th>
+                <th>Email</th>
+                <th>Query</th>
+                <th>Date Added</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each report}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.mobile}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.message}}</td>
+                <td>{{this.dateAdded}}</td>
+                <td>{{this.status}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>

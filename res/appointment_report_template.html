@@ -1,0 +1,38 @@
+<body>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 1px 5px;
+        }
+    </style>
+    <h1>Appointments</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Contact No.</th>
+                <th>Email</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each report}}
+            <tr>
+                <td>{{this.lastName}}</td>
+                <td>{{this.firstName}}</td>
+                <td>{{this.contact}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.appointmentDate}}</td>
+                <td>{{this.appointmentTime}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>

@@ -1,0 +1,18 @@
+
+# Directories
+node_modules
+.next
+.vscode
+
+# Environment Files
+.env.local
+
+# Lock Files
+yarn.lock
+
+# Misc Files
+*.log
+*.rar
+
+# Config Files
+serviceAccount.json
