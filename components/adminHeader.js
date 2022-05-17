@@ -6,8 +6,10 @@ import navStyles from "@/styles/adminDashboard.module.css";
 import { BsXLg, BsFillPersonFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 
+import UpdatePasswordModal from "./updatePasswordModal";
+
 import {
-    Box,
+    useToast,
     Flex,
     Menu,
     MenuButton,
@@ -19,6 +21,8 @@ import {
 import axios from "axios";
 import ActionButton from "./actionButton";
 import { AnimatePresence, motion, isValidMotionProp } from "framer-motion";
+import { updatePassword } from "firebase/auth";
+import BaseModal from "./baseModal";
 
 const MotionBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
@@ -102,6 +106,9 @@ function AdminNav({ isSuperAdmin, hide, currentRoute }) {
 export default function AdminHeader({ admin, csrfToken }) {
     const router = useRouter();
     const [showNav, setShowNav] = useState(false);
+    const [showUpdatePasswordModal, setShowUpdatePasswordModal] =
+        useState(false);
+    const toast = useToast();
 
     const signOut = async () => {
         await axios.get("/api/admin/invalidate", {
@@ -111,48 +118,73 @@ export default function AdminHeader({ admin, csrfToken }) {
     };
 
     return (
-        <Flex
-            className={`py-4 ${styles.header}`}
-            justifyContent={"space-between"}
-            alignItems={"center"}
-            px={[2, 5]}
-            position={"sticky"}
-            top={0}
-            zIndex={"dropdown"}
-            bg={"#031579"}
-        >
-            <ActionButton
-                icon={FaBars}
-                onClick={() => setShowNav(true)}
-                color={"#FFF"}
-            />
-            <Menu>
-                <MenuButton
-                    className={`d-flex justify-content-between align-items center ${styles.profileBtn}`}
-                >
-                    <BsFillPersonFill />
-                    <span className={`ms-2`}>
-                        {admin.firstName} {admin.lastName}
-                    </span>
-                </MenuButton>
-                <MenuList>
-                    <MenuItem
-                        className={`${styles.menuItem}`}
-                        onClick={signOut}
+        <>
+            <Flex
+                className={`py-4 ${styles.header}`}
+                justifyContent={"space-between"}
+                alignItems={"center"}
+                px={[2, 5]}
+                position={"sticky"}
+                top={0}
+                zIndex={"dropdown"}
+                bg={"#031579"}
+            >
+                <ActionButton
+                    icon={FaBars}
+                    onClick={() => setShowNav(true)}
+                    color={"#FFF"}
+                />
+                <Menu>
+                    <MenuButton
+                        className={`d-flex justify-content-between align-items center ${styles.profileBtn}`}
                     >
-                        Sign Out
-                    </MenuItem>
-                </MenuList>
-            </Menu>
+                        <BsFillPersonFill />
+                        <span className={`ms-2`}>
+                            {admin.firstName} {admin.lastName}
+                        </span>
+                    </MenuButton>
+                    <MenuList>
+                        <MenuItem
+                            className={`${styles.menuItem}`}
+                            onClick={() => setShowUpdatePasswordModal(true)}
+                        >
+                            Update Password
+                        </MenuItem>
+                        <MenuItem
+                            className={`${styles.menuItem}`}
+                            onClick={signOut}
+                        >
+                            Sign Out
+                        </MenuItem>
+                    </MenuList>
+                </Menu>
+                <AnimatePresence>
+                    {showNav && (
+                        <AdminNav
+                            isSuperAdmin={admin.accountType === "super-admin"}
+                            hide={() => setShowNav(false)}
+                            currentRoute={router.pathname}
+                        />
+                    )}
+                </AnimatePresence>
+            </Flex>
             <AnimatePresence>
-                {showNav && (
-                    <AdminNav
-                        isSuperAdmin={admin.accountType === "super-admin"}
-                        hide={() => setShowNav(false)}
-                        currentRoute={router.pathname}
-                    />
+                {showUpdatePasswordModal && (
+                    <BaseModal>
+                        <UpdatePasswordModal
+                            admin={admin}
+                            close={() => setShowUpdatePasswordModal(false)}
+                            changeSuccess={() =>
+                                toast({
+                                    title: "Password Changed Successfully",
+                                    status: "success",
+                                    duration: 1500,
+                                })
+                            }
+                        />
+                    </BaseModal>
                 )}
             </AnimatePresence>
-        </Flex>
+        </>
     );
 }
