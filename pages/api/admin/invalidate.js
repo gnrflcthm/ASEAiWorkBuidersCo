@@ -10,7 +10,7 @@ const handler = async (req, res) => {
                 sameSite: true,
                 secure: process.env.NODE_ENV === "production",
                 path: "/",
-                expires: new Date(0),
+                maxAge: 0,
             })
         );
         res.status(200).json({ msg: "Logged Out" });
