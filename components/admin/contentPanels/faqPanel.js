@@ -290,7 +290,7 @@ export default function FAQPanel({ toast, csrfToken }) {
                                                 tooltip={"Delete Question"}
                                                 placement={"top-start"}
                                                 onClick={() =>
-                                                    deleteConstructionQuestion(
+                                                    deleteServiceQuestion   (
                                                         i
                                                     )
                                                 }
